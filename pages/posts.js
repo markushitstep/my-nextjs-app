@@ -4,3 +4,4 @@ export default function posts() {
         <p>lorem ipsum dolor sit amet</p>
     </>
 }
+
