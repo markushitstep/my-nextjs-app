@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import styles from "./MainLayout.module.css";
+import styles from "../styles/MainLayout.module.css";
 
 export default function MainLayout({ children, title = 'Next App'}) {
     return (
