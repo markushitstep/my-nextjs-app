@@ -1,7 +1,11 @@
 import Router from 'next/router'
 import MainLayout from "../../components/MainLayout"
 
-export default function About({ title }) {
+interface AboutPageProps {
+    title: string
+}
+
+export default function About({ title }:AboutPageProps) {
 
     const linkClickHandler = () => {
         Router.push('/posts');
@@ -18,7 +22,7 @@ export default function About({ title }) {
 
 About.getInitialProps = async ({}) =>{
     const respose = await fetch("http://localhost:4200/about");
-    const data = await respose.json();
+    const data: AboutPageProps = await respose.json();
 
     return { title: data.title }
 }
